@@ -1,8 +1,8 @@
 streamlit
 pandas
 numpy
-plotly
+requests
 yfinance
 vaderSentiment
-requests
-python-dateutil
+plotly
+pyyaml
