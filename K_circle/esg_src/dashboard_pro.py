@@ -14,8 +14,8 @@ from bs4 import BeautifulSoup
 # -----------------------------------------------------
 # 기본 설정
 # -----------------------------------------------------
-st.set_page_config(page_title="ESG 기반 AI 투자지원 (DART 연계)", layout="wide")
-st.title("📊 ESG 기반 AI 투자지원 대시보드 (DART 연계)")
+st.set_page_config(page_title="ESG 기반 AI 투자지원 ", layout="wide")
+st.title("📊 ESG 기반 AI 투자지원 대시보드 ")
 st.caption("B.B.BIC | DART 전자공시 + 뉴스 분석 → AI 점수화 → 대시보드")
 
 # -----------------------------------------------------
@@ -49,7 +49,7 @@ for sector, companies_dict in COMPANY_BY_SECTOR.items():
 # -----------------------------------------------------
 # DART API 함수들
 # -----------------------------------------------------
-DART_API_KEY = st.secrets.get("DART_API_KEY", "")
+DART_API_KEY = st.secrets.get("DART_API_KEY", "69885919e9b7ad693f535e531c94321560aa87cf")
 
 @st.cache_data(ttl=60*60*24)  # 24시간 캐시
 def get_dart_reports(corp_code: str, year: int):
@@ -401,3 +401,4 @@ st.dataframe(
         "지배구조(G)": st.column_config.ProgressColumn("G", min_value=0, max_value=1),
     }
 )
+
